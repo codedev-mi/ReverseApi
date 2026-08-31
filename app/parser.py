@@ -9,24 +9,24 @@ def parse_image(data: Dict[str, Any]) -> Optional[str]:
         return None
 
 def parse_experience(data: Dict[str, Any]) -> List[Dict[str, Any]]:
-    # OIDC standard access does not return professional experience blocks
-    return []
+    # Returns data if present (e.g. mock data), otherwise defaults to empty list
+    return data.get("experience") or []
 
 def parse_education(data: Dict[str, Any]) -> List[Dict[str, Any]]:
-    # OIDC standard access does not return education blocks
-    return []
+    # Returns data if present (e.g. mock data), otherwise defaults to empty list
+    return data.get("education") or []
 
 def parse_skills(data: Dict[str, Any]) -> List[str]:
-    # OIDC standard access does not return skills
-    return []
+    # Returns data if present (e.g. mock data), otherwise defaults to empty list
+    return data.get("skills") or []
 
 def parse_certifications(data: Dict[str, Any]) -> List[Dict[str, Any]]:
-    # OIDC standard access does not return certifications
-    return []
+    # Returns data if present (e.g. mock data), otherwise defaults to empty list
+    return data.get("certifications") or []
 
 def parse_languages(data: Dict[str, Any]) -> List[Dict[str, Any]]:
-    # OIDC standard access does not return languages
-    return []
+    # Returns data if present (e.g. mock data), otherwise defaults to empty list
+    return data.get("languages") or []
 
 def parse_profile(data: Dict[str, Any], profile_url: str) -> Dict[str, Any]:
     name = data.get("name")

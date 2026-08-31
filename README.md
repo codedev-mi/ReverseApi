@@ -1,5 +1,8 @@
 # LinkedIn Profile API
 
+**Live Deployment URL**: [https://tross-linkedin-api-zq63.onrender.com](https://tross-linkedin-api-zq63.onrender.com)  
+**Live Swagger UI**: [https://tross-linkedin-api-zq63.onrender.com/docs](https://tross-linkedin-api-zq63.onrender.com/docs)
+
 [![Python Version](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0%2B-green)](https://fastapi.tiangolo.com/)
 [![Docker](https://img.shields.io/badge/Docker-enabled-blue)](https://www.docker.com/)
@@ -107,10 +110,14 @@ CORS_ORIGINS=*
    python -m uvicorn app.main:app --reload
    ```
 
-The API will run at `http://localhost:8000`.
+The API runs locally at `http://localhost:8000` and is deployed live at `https://tross-linkedin-api-zq63.onrender.com`.
 
-- Interactive API docs (Swagger): [http://localhost:8000/docs](http://localhost:8000/docs)
-- Alternative API docs (ReDoc): [http://localhost:8000/redoc](http://localhost:8000/redoc)
+* **Local Documentation**:
+  * Interactive API docs (Swagger): [http://localhost:8000/docs](http://localhost:8000/docs)
+  * Alternative API docs (ReDoc): [http://localhost:8000/redoc](http://localhost:8000/redoc)
+* **Live Documentation**:
+  * Interactive API docs (Swagger): [https://tross-linkedin-api-zq63.onrender.com/docs](https://tross-linkedin-api-zq63.onrender.com/docs)
+  * Alternative API docs (ReDoc): [https://tross-linkedin-api-zq63.onrender.com/redoc](https://tross-linkedin-api-zq63.onrender.com/redoc)
 
 ## API Documentation
 
@@ -160,13 +167,24 @@ Fetches and maps profile details. Accepts a token via the `Authorization: Bearer
   }
   ```
 
-### Curl Example
+### Curl Examples
+
+**Local Server:**
 ```bash
 curl -X POST \
   http://localhost:8000/api/v1/profile \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer your_oauth_access_token" \
-  -d '{"linkedin_url":"https://www.linkedin.com/in/authenticated-member/"}'
+  -d '{"linkedin_url":"https://www.linkedin.com/in/shrutibhangale/"}'
+```
+
+**Live Server (Production):**
+```bash
+curl -X POST \
+  https://tross-linkedin-api-zq63.onrender.com/api/v1/profile \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer your_oauth_access_token" \
+  -d '{"linkedin_url":"https://www.linkedin.com/in/shrutibhangale/"}'
 ```
 
 ---

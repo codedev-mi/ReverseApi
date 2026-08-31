@@ -47,14 +47,54 @@ class LinkedInClient:
             logger.info("Mock token detected, returning mock profile response.")
             return {
                 "sub": "auth-member-id",
-                "name": "Alex Sharma",
-                "given_name": "Alex",
-                "family_name": "Sharma",
-                "picture": "https://media.licdn.com/dms/image/mock_alex.jpg",
+                "name": "Shruti Bhangale",
+                "given_name": "Shruti",
+                "family_name": "Bhangale",
+                "picture": "https://media.licdn.com/dms/image/mock_shruti.jpg",
                 "locale": {
                     "country": "IN",
                     "language": "en"
-                }
+                },
+                "headline": "Full-Stack Developer | · MERN Stack · Python · AWS | Actively looking Entry-Level Opportunities",
+                "about": "Full-stack developer with a strong foundation in React.js, Node.js, Python, C++, and the MERN stack. I completed my MCA at K.K. Wagh Institute of Engineering Education & Research (2024–2026), building a solid grounding in software engineering, data structures & algorithms, and system design principles. I enjoy building responsive, performant web applications — from designing clean UIs to optimizing backend logic, integrating REST APIs, and incorporating AI-powered features. I'm hands-on with Figma, Postman, MongoDB, and Git, and hold certifications in AWS Cloud Foundations and Oracle Cloud Infrastructure. I completed a 7-month internship as a Full Stack Developer at COFA Studio, working on real-world marketing web products, and earlier interned at VirtuNexa. I'm now actively seeking full-time full-stack or frontend developer roles where I can contribute to scalable, AI-integrated products and grow alongside experienced teams.",
+                "experience": [
+                    {
+                        "title": "Full Stack Developer Intern",
+                        "company": "COFA Studio",
+                        "duration": "7 months",
+                        "description": "Worked on real-world marketing web products."
+                    },
+                    {
+                        "title": "Full Stack Developer Intern",
+                        "company": "VirtuNexa",
+                        "duration": "",
+                        "description": "Internship experience."
+                    }
+                ],
+                "education": [
+                    {
+                        "school": "K.K. Wagh Institute of Engineering Education & Research",
+                        "degree": "Master of Computer Applications (MCA)",
+                        "duration": "2024–2026"
+                    }
+                ],
+                "skills": [
+                    "React.js", "Node.js", "Python", "C++", "MERN Stack", "Figma", "Postman", "MongoDB", "Git"
+                ],
+                "certifications": [
+                    {
+                        "name": "AWS Cloud Foundations"
+                    },
+                    {
+                        "name": "Oracle Cloud Infrastructure"
+                    }
+                ],
+                "languages": [
+                    {
+                        "language": "English",
+                        "proficiency": "Professional working proficiency"
+                    }
+                ]
             }
 
         url = "https://api.linkedin.com/v2/userinfo"
